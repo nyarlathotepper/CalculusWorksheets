@@ -1,0 +1,982 @@
+\section{Series}\index{Series}
+\fancyhead[R]{\large Series} 
+
+\begin{tagblock}{Series, WarmUp, W13}
+\begin{question}
+
+The only reason we need sequences is that sequences allow us to define \textit{series}. Knowing the difference between these concepts is probably the most difficult part of this course because...a series is a sequence, too!
+
+From Calc I (or maybe earlier) you saw the notation $\Sigma$ for a sum of numbers when it came to defining a definite integral. Just to refresh your memory:
+
+\bigskip
+\[
+\sum_{n=1}^51=1+1+1+1+1=5
+\]
+\bigskip
+\[
+\sum_{n=2}^4n=2+3+4=9
+\]
+
+Try a few! Find the sum.
+
+\bigskip
+
+a) $\displaystyle\sum_{n=1}^3n^2$
+ 
+\bigskip
+
+b) $\displaystyle\sum_{n=1}^6\left(\frac 1 2\right)^n$
+
+\bigskip
+
+c) $\displaystyle\sum_{n=3}^6\frac 1 n$
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, WarmUp, W13
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+ 
+
+\begin{tagblock}{Series, Theory, GeometricSeries, W13}
+\begin{question}
+
+We're now almost ready to define an infinite sum of numbers, but before we do, we should ruminate a bit on why we even need a proper definition! Here is the best example I know: look at the sum
+\[
+1+(-1)+1+(-1)+1+(-1)+\cdots
+\]
+And now with some clever use of parentheses...
+\begin{align*}
+0&=(1+(-1))+(1+(-1))+(1+(-1))+\cdots\\
+&=1+((-1)+1)+((-1)+1)+((-1)+1)+\cdots\\
+&=1
+\end{align*}
+So $0=1$ and we can all give up on math now. Discuss this with your group.
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, Theory, GeometricSeries, W13
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+ \begin{tagblock}{Series, Definition, PartialSums, W13}
+\begin{question}
+
+Previously, we alluded to how a series was really just a sequence. It's now time to make sense of that assertion. Suppose you have a sequence $\displaystyle(a_n)_{n=1}^{\infty}$ of real numbers. Let
+\begin{equation}\label{partial}
+S_k=\sum_{n=1}^ka_n
+\end{equation}
+
+So for example, if $a_n=\dfrac 1 {2^n}$, 
+\[
+S_1=a_1=\frac 1 2
+\]
+\smallskip
+\[
+S_2=a_1+a_2=\frac 1 2 +\frac 1 4=\frac 3 4
+\]
+\smallskip
+\[
+S_3=a_1+a_2+a_3=\frac 1 2 +\frac 1 4 +\frac 1 8=\frac 7 8
+\]
+
+
+\bigskip
+
+If there is a number $L$ such that the sequence $(S_k)$ converges to $L$, we write
+\[
+\sum_{n=1}^{\infty}a_n=L.
+\]
+If no such number $L$ exists, we say the series \textit{diverges}. So an ``infinite sum" of real numbers is really just a sequence of (finite sums of) real numbers. The numbers $S_k$ are called the \textit{partial sums} of the infinite series.  
+
+\bigskip
+
+a) Now let $a_n=(-1)^{n+1}$. Find a formula for the partial sums $(S_k)$. Does $\displaystyle\lim_{k\to\infty}S_k$ exist? Why or why not?
+
+\bigskip
+
+b) Let $b_n=1^n$. Find a formula for the partial sums $(S_k)$. Does $\displaystyle\lim_{k\to\infty}S_k$ exist? Why or why not?
+
+
+\bigskip
+
+c) Finally, let 
+\[
+c_n=\dfrac 1 n-\frac 1 {n+1}.
+\] 
+Find a formula for the partial sums $(S_k)$. Does $\displaystyle\lim_{k\to\infty}S_k$ exist? Why or why not?
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, Definition, PartialSums, W13
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, GeometricSeries, Challenge, W13}
+\begin{question}
+
+Two trains are on the same track a distance 60 miles apart heading towards one another, each at a speed of 30 mph. A fly starting out at the front of one train flies towards the other at a speed of 35 mph. Upon reaching the other train, the fly turns around and continues towards the first train. When it reaches the first train, it turns around and flies towards the other train, and so on. How many miles does the fly travel before getting squashed in the collision of the two trains?
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, GeometricSeries, Challenge, W13
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, GeometricSeries, Theory, W14}
+\begin{question}
+
+Now we will look at \textit{geometric series}, infinite series whose terms are a geometric sequence. Parts a) and b) of problem \#2 are geometric series. For the remainder of this problem, let's have $a_n=x^n$ for some real number $x$ where $x\ne 1$. We took care of $x=1$ in \#2c).
+
+\bigskip
+
+a) Write out the partial sum $S_3$. Then write out $xS_3$. If you subtract $xS_3$ from $S_4$, what is left over? 
+
+\bigskip
+
+b) Same question as a), but for $S_5$ and $xS_4$. 
+
+\bigskip
+
+c) Same question as a), but for $S_{k+1}$ and $xS_{k}$. 
+
+\bigskip
+
+d) Observe that $S_{k+1}=S_k+x^{k+1}$. Use this observation and your answer from part c) to come up with a formula for $S_k$ that doesn't involve any summations. 
+
+\bigskip
+
+e) Take the limit as $k\to\infty$ in your formula for $S_k$ from part d). When does the limit exist? 
+
+\bigskip
+
+f) When the limit in part e) does exist, what is the value?
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, GeometricSeries, Theory, W14
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, GeometricSeries, Defnition, W14}
+\begin{question}
+
+You should have obtained that
+\[
+\sum_{n=1}^{\infty}x^n=\frac x {1-x}
+\]
+when $|x|<1$ and diverges when $|x|\geq 1$. In fact, there is a more general formula: the sum of a geometric series is
+\[
+\frac a {1-x}
+\]
+where $a$ is the first term of the series and $x$ is the ratio. Use this formula with abandon on the following problems: does the infinite series converge, and if so, what is the value? 
+
+\bigskip 
+
+a) $\displaystyle\sum_{n=0}^{\infty}\frac 1 {4^n}$ 
+
+\bigskip
+
+b) $\displaystyle\sum_{n=4}^{\infty}\left(\frac 2 3\right)^{-n}$ 
+
+\bigskip
+
+c) $\displaystyle\sum_{n=2}^{\infty}\frac {(-5)^n}{17^{n+1}}$ 
+
+\bigskip
+
+d) $\displaystyle\sum_{n=m}^{\infty}\frac {r^{n+k}}{s^{n+l}}$ 
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, GeometricSeries, Definition, W14
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, Defnition, W14, WarmUp}
+\begin{question}
+
+We start with a sequence of real numbers $(a_n)_{n=0}^{\infty}$. A \textit{power series} centered at zero is a function 
+\[
+f(x)=\sum_{n=0}^{\infty}a_nx^n.
+\]
+
+\bigskip
+
+We call $(a_n)$ the \textit{coefficients} of the power series. The difference between a power series and a regular series is the variable $x$. 
+
+Our first example of a power series came from geometric series; namely,
+\begin{equation}\label{geo}
+g(x)=\sum_{n=1}^{\infty}x^n=\frac x {1-x}.
+\end{equation}
+
+
+\bigskip
+
+a) Find the coefficients $(a_n)$ for equation \eqref{geo}.
+ 
+\bigskip
+
+b) For the general sum $\displaystyle\sum_{n=0}^{\infty}a_nx^n$, what is a (and perhaps the only) value of $x$ that you can show the series converges for?
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, Definition, W14, WarmUp
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, GeometricSeries, Challenge, W14}
+\begin{question}
+
+Watch this \href{https://www.youtube.com/watch?v=E-d9mgo8FGk}{video}.
+
+\bigskip
+
+Putting aside the sheer lunacy of what the gentlemen in the video is claiming to show, find all the points in the video where he lies to you. What are the lies?
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, GeometricSeries, Challenge, W14
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, Example, Definition, RatioTest, RadiusOfConvergence, W15}
+\begin{question}
+
+The power series $\displaystyle\sum_{n=0}^{\infty}a_nx^n$ always converges for $x=0$. How do we tell if there are other values? The answer actually comes from geometric series! If we look at the $(n+1)^{st}$ term in the geometric series divided by the $n^{th}$ term in the series, for all nonzero numbers $x$, we get 
+\[
+\frac{x^{n+1}}{x^n}=x.
+\]
+We know the series converges when $|x|<1$, so another way of phrasing this is that the ratio of the $(n+1)^{st}$ term in the geometric series divided by the $n^{th}$ term must be less than 1 in absolute value. This is the basis of the \textit{ratio test}, almost the only test you need to know for series.
+
+\bigskip
+
+\noindent\textbf{Ratio Test, c=0:} A power series $\displaystyle\sum_{n=0}^{\infty}a_nx^n$, centered at zero,
+\begin{itemize}
+\item converges when $\displaystyle\lim_{n\to\infty}\left|\frac{a_{n+1}x^{n+1}}{a_nx^n}\right|=|x|\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|<1$,
+\item diverges when $\displaystyle\lim_{n\to\infty}\left|\frac{a_{n+1}x^{n+1}}{a_nx^n}\right|=|x|\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|>1$, and 
+
+\item when $\displaystyle\lim_{n\to\infty}\left|\frac{a_{n+1}x^{n+1}}{a_nx^n}\right|=|x|\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|=1$, the test fails and YOU KNOW NOTHING. 
+\end{itemize}
+\bigskip
+
+The values of $x$ for which the power series converges is known as the \textit{interval of convergence}. The \textit{radius of convergence} is half the length of the interval and can be found from the ratio test by computing the number $r$ with $|x|<r$ giving convergence and $|x|>r$ giving divergence for the power series. It's also possible to have degenerate intervals where only $x=0$ gives convergence and infinite intervals where the series converges for all real numbers. In the first case, we say the radius is 0, and in the second, we say it is infinite.
+
+\bigskip
+
+Here's an example for the power series $\displaystyle\sum_{n=1}^{\infty}\frac{2^nx^n}n$ (it's easier to do the algebra without limits).
+\begin{align*}
+\left|\frac{a_{n+1}x^{n+1}}{a_nx^n}\right|&=\left|\frac{2^{n+1}x^{n+1}/(n+1)}{2^nx^n/n}\right|\\
+&=\left|\frac{2^{n+1}}{2^n}\frac {x^{n+1}}{x^n}\frac n {n+1}\right|\\
+&=\left| 2x\right|\frac n {n+1}\\
+&=2|x|\frac n {n+1}
+\end{align*}
+For the calculus part, we take the limit as $n\to\infty$. The 2 and $|x|$ don't have any $n$'s, so they just pop out of the limit:
+\[
+\lim_{n\to\infty}2|x|\frac n {n+1}=2|x|\lim_{n\to\infty}\frac n {n+1}=2|x|
+\]
+since $\displaystyle\lim_{n\to\infty}\dfrac n {n+1}=1$.
+
+\bigskip
+
+a) If it wasn't obvious why $\displaystyle\lim_{n\to\infty}\dfrac n {n+1}=1$, try using l'Hopital's rule. 
+
+\bigskip
+
+To find the radius of convergence, set $2|x|<1$ to get $|x|<1/2$, which means the radius of convergence is equal to 1/2.
+
+\bigskip
+
+Find the radius of convergence for the following power series. 
+
+\bigskip
+
+b) $\displaystyle\sum_{n=0}^{\infty}\frac{x^{2n+1}(-1)^n}{2n+1}$
+
+\bigskip
+
+c) $\displaystyle\sum_{n=0}^{\infty}\frac{x^n}{n!}$ (the convention is that $0!=1$.)
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, Example, Definition, RatioTest, RadiusOfConvergence, W15
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, Definition, RatioTest, RadiusOfConvergence, W15}
+\begin{question}
+
+You may have been wondering why we used ``centered at 0" for power series. In special cases (like when zero is not in the domain), we'll need to shift our power series around. The most general formula for a power series is 
+\[
+\displaystyle\sum_{n=0}^{\infty}a_n(x-c)^n.
+\]
+The point $x=c$ is called the \textit{center} of the series. 
+
+\bigskip
+
+a) Now for what value of $x$ do you know the series converges?
+
+\bigskip
+
+For power series not centered at zero, the ratio test becomes
+
+\bigskip
+
+\noindent\textbf{Ratio Test:} A power series $\displaystyle\sum_{n=0}^{\infty}a_n(x-c)^n$, centered at zero,
+\begin{itemize}
+\item converges when $\displaystyle\lim_{n\to\infty}\left|\frac{a_{n+1}(x-c)^{n+1}}{a_n(x-c)^n}\right|=|x-c|\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|<1$,
+\item diverges when $\displaystyle\lim_{n\to\infty}\left|\frac{a_{n+1}(x-c)^{n+1}}{a_n(x-c)^n}\right|=|x-c|\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|>1$, and
+\item when $\displaystyle\lim_{n\to\infty}\left|\frac{a_{n+1}(x-c)^{n+1}}{a_n(x-c)^n}\right|=|x-c|\lim_{n\to\infty}\left|\frac{a_{n+1}}{a_n}\right|\cdot |x-c|=1$, the test fails and YOU KNOW NOTHING. 
+\end{itemize}
+
+\bigskip
+
+b) Find the radius of convergence of $\displaystyle\sum_{n=1}^{\infty}\frac{(x-1)^n(-1)^{n+1}}{n}$
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, Definition, RatioTest, RadiusOfConvergence, W15
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+ 
+
+\begin{tagblock}{Series, PowerSeries, RatioTest, RadiusOfConvergence, Derivatives, W15}
+\begin{question}
+
+For the differential equation
+\begin{equation}\label{series}
+f''(r)+\frac 1 rf'(r)+\alpha f(r)=0,
+\end{equation}
+the solution is a power series of the form $\displaystyle\sum_{n=0}^{\infty}a_nx^n$, but to check that this is a solution, we'd have to know how to differentiate a power series! Fortunately, what we'd like to be true is actually true. Let's start off with 
+ \begin{equation}\label{geo}
+g(x)=\sum_{n=1}^{\infty}x^n.
+\end{equation}
+
+If we write this out longhand, we get $x+x^2+x^3+x^4+\cdots$. Remember that $|x|<1$!
+
+\bigskip
+
+a) How do you think you'd take a derivative of equation \eqref{geo}?
+
+\bigskip
+
+b) Remember that for $|x|<1$, $\displaystyle\sum_{n=0}^{\infty}x^n=\frac 1 {1-x}$. Take the derivative of $\dfrac 1 {1-x}$. What is the domain of the derivative?
+
+\bigskip
+
+c) What do you think the radius of convergence should be for the power series you found in part a)?
+
+\bigskip
+
+d) Using the ratio test, confirm the radius of convergence of your answer from a). 
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, RatioTest, RadiusOfConvergence, Derivatives, W15
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, RatioTest, RadiusOfConvergence, Derivatives, Example, W16}
+\begin{question}
+
+Let $\displaystyle f(x)=\sum_{n=0}^{\infty} a_n(x-c)^n$ be a power series with a nonzero radius of convergence $R$. Then 
+\[
+f'(x)=\sum_{n=1}^{\infty}na_n(x-c)^{n-1}=a_1+2a_2(x-c)+3a_3(x-c)^2+\cdots
+\]
+The radius of convergence of $f'$ is again $R$ (this can be confirmed via the ratio test).
+
+\bigskip
+
+For an example, let's again use
+\[
+g(x)=\sum_{n=1}^{\infty}x^n=1+x+x^2+x^3+x^4\cdots
+\]
+for $|x|<1$.
+Then
+\begin{align*}
+g'(x)&=1+2x+3x^2+4x^3\cdots\\
+&=\sum_{n=0}^{\infty}(n+1)x^n
+\end{align*}
+
+with radius of convergence equal to one. 
+
+\bigskip
+
+a) Let $e(x)=\displaystyle\sum_{n=0}^{\infty}\frac{x^n}{n!}$. Find $e'(x)$. How does this answer compare with $e(x)$?
+
+\bigskip
+
+b) Now let $f(x)=g(1-x)=\displaystyle\sum_{n=1}^{\infty}(1-x)^n$. Find $f'(x)$. What do you see? 
+
+\bigskip
+
+c) For a big step up, try differentiating $\displaystyle\sum_{n=0}^{\infty}(-1)^n\dfrac {x^{2n}}{(2n)!}$ twice. If you can do this, then I pronounce you ready.
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, RatioTest, RadiusOfConvergence, Derivatives, Example, W16
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, RatioTest, RadiusOfConvergence, Integration, W16}
+\begin{question}
+
+Let's take a moment to examine integration of power series. Happily, it works just like differention: if $\displaystyle f(x)=\sum_{n=0}^{\infty} a_n(x-c)^n$ is a power series with a nonzero radius of convergence $R$, then 
+\[
+\int f(x) \ dx=C+\sum_{n=0}^{\infty}a_n\frac{(x-c)^{n+1}}{n+1}=C+a_0(x-c)+a_1\frac{(x-c)^2} 2+\cdots
+\]
+Again you can show via the ratio test that the radius of convergence of $\displaystyle\int f(x) \ dx$ is $R$. \bigskip
+
+a) Again consider the geometric series $g(x)=\displaystyle\sum_{n=1}^{\infty}x^n$ for $|x|<1$, and let $f(x)=g(x)+1=\displaystyle\sum_{n=0}^{\infty}x^n$. What familiar function does $f$ represent?
+
+\bigskip
+
+b) Let $h(x)=f(1-x)$. Integrate $h$. What familiar function should this represent?
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, RatioTest, RadiusOfConvergence, Integration, W16
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, RatioTest, RadiusOfConvergence, Derivatives, Challenge, W16}
+\begin{question}
+
+Let 
+\[
+J_0(x)=1+\sum_{n=1}^{\infty}\frac {x^{2n}(-1)^n}{(n!)^24^n}.
+\]
+
+\bigskip
+
+a) What do you think the radius of convergence of $J_0$ is? 
+
+\bigskip
+
+b) Use the ratio test to find the radius of convergence for $J_0$. Is this what you guessed?
+
+\bigskip
+
+c) Show that, with $\alpha=1$, $J_0$ is a solution to 
+\[
+f''(r)+\frac 1 rf'(r)+\alpha f(r)=0.
+\]
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, RatioTest, RadiusOfConvergence, Derivatives, Challenge, W16
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, RatioTest, RadiusOfConvergence, Derivatives, Integration, Challenge, W16}
+\begin{question}
+
+a) Suppose that the radius of convergence of $\displaystyle f(x)=\sum_{n=0}^{\infty} a_n(x-c)^n$ is $R>0$. Show that the radius of convergence of $f'$ is also $R$.
+
+\bigskip
+
+b) Suppose that the radius of convergence of $\displaystyle f(x)=\sum_{n=0}^{\infty} a_n(x-c)^n$ is $R>0$. Show that the radius of convergence of $\int f(x) \ dx$ is also $R$.
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, RatioTest, RadiusOfConvergence, Derivatives, Integration, Challenge, W16
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, Derivatives, Factorials, Challenge, W17}
+\begin{question}
+
+Remember the geometric series
+ \begin{equation}\label{geo}
+g(x)=\sum_{n=1}^{\infty}x^n.
+\end{equation}
+
+We know $g(x)=\dfrac x {1-x}$ when $|x|<1$ and that $\displaystyle\sum_{n=0}^{\infty}x^n=\dfrac 1 {1-x}$. 
+
+You might have discovered, or at least had the sneaking suspicion, that 
+\begin{equation}\label{exp}
+e^x=\sum_{n=0}^{\infty}\frac{x^n}{n!}.
+\end{equation}
+
+\textbf{a)} Quote the Fundamental Theorem of Calculus, applied to the differential equation $\dfrac{dy}{dx}=y$, to verify equation \eqref{exp}
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, Derivatives, Factorials, Challenge, W17
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, Derivatives, Integration, MacLaurinSeries, TaylorSeries, W17}
+\begin{question}
+
+Most of the power series we've seen are examples of \textit{MacLaurin series}; given a function $f$ that is defined at $x=0$, its MacLaurin series is the power series
+\begin{equation}\label{mac}
+\sum_{n=0}^{\infty}f^{(n)}(0)\frac{x^n}{n!},
+\end{equation}
+where $f^{(n)}(0)$ is the $n^{th}$ derivative of $f$ evaluated at zero, with the convention $f^{(0)}(x)=f(x)$. 
+
+\bigskip
+
+\textbf{a)} Find the MacLaurin series for $\ln(1-x)$. Please don't do this using the definition of a MacLaurin series. What is the radius of convergence? 
+
+\bigskip
+
+\textbf{b)} Find the MacLaurin series for $\arctan(x)$. Same request as for part c), also find the radius of convergence.
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, Derivatives, Integration, MacLaurinSeries, TaylorSeries, W17
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, MacLaurinSeries, TaylorSeries, W17}
+\begin{question}
+
+If you can find a power series centered at $c=0$ with nonzero radius of convergence that equals a function $f$, then the power series MUST be the MacLaurin series of $f$. Use this fact to find a power series representation for the following functions. Be sure to say something about (if not explicitly compute) the radius of convergence!
+
+\bigskip
+
+\textbf{a)} $f(x)=\dfrac {x}{1-3x}$
+
+\bigskip
+
+\textbf{b)} $g(x)=3^x$
+
+\bigskip
+
+\textbf{c)} $h(x)=\ln(4x)$
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, MacLaurinSeries, TaylorSeries, W17
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, MacLaurinSeries, TaylorSeries, Challenge, W17}
+\begin{question}
+
+If $f(x)=e^{x^5}$, find the value of $f^{(50)}(0)$. 
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, MacLaurinSeries, TaylorSeries, Challenge, W17
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, MacLaurinSeries, TaylorSeries, Derivatives, Challenge, W18}
+\begin{question}
+
+Remember that the MacLaurin series for a function $f$ is the power series 
+\begin{equation}\label{mac}
+\sum_{n=0}^{\infty}f^{(n)}(0)\frac{x^n}{n!},
+\end{equation}
+where $f^{(n)}(0)$ is the $n^{th}$ derivative of $f$ evaluated at zero, with the convention $f^{(0)}(x)=f(x)$. 
+
+A trite comment about MacLaurin series is that $f$ needs to be infinitely differentiable in order to obtain its MacLaurin series. A not-so-trite question is, how do we know the MacLaurin series has any meaningful relationship to $f$? In the last worksheet, we used integration, differentiation, and minor tricks to show equality.
+
+\bigskip
+
+a) Compute the MacLaurin series for $f(x)=\sin(x)$.
+
+\bigskip
+
+If we knew that sine was equal to its MacLaurin series, we could differentiate to get the MacLaurin series for cosine. Unfortunately, our tricks have run out, so we need to stretch our hand into the future and steal some information from differential equations. Remember that $f(x)=e^x$ satisfies the differential equation $y'=y$? 
+\bigskip
+
+b) Check that both sine and cosine satisfy the differential equation 
+\begin{equation}\label{dd}
+y''+y=0.
+\end{equation}
+
+\bigskip
+
+c) Check that the MacLaurin series for sine satisfies equation \eqref{dd}. 
+
+\bigskip
+
+From differential equations, any solution $f$ to equation \eqref{dd} must be of the form $f(x)=c_1\sin(x)+c_2\cos(x)$ for some constants $c_1$ and $c_2$. 
+
+\bigskip
+
+d) Use this fact to show that if $f$ is the MacLaurin series for sine, $c_1=1$ and $c_2=0$. 
+
+\bigskip
+
+e) Show that cosine equals its MacLaurin series for all values of $x$. 
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, MacLaurinSeries, TaylorSeries, Derivatives, Challenge, W18
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, TaylorSeries, Derivatives, Challenge, W18}
+\begin{question}
+
+It isn't always possible to express a function as a MacLaurin series. Fortunately, there is a generalization to any center at all, not just $c=0$, called a \textit{Taylor Series}. The Taylor series of $f$ centered at $c$ is
+\[
+\sum_{n=0}^{\infty}f^{(n)}(c)\frac{(x-c)^{n}}{n!}.
+\]
+
+\bigskip
+
+Note that every MacLaurin series is a Taylor series, but the reverse is not true.  
+
+\bigskip
+
+a) With $c=1$, find the Taylor series for $\ln(x)$. Please don't use the definition. What is the radius of convergence?
+
+\bigskip
+
+b) Again with $c=1$, find the Taylor series for $\sqrt{x}$. This has to be done via the definition and is mind-boggling from a notational standpoint.
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, TaylorSeries, Derivatives, Challenge, W18
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+ 
+
+\begin{tagblock}{Series, PowerSeries, TaylorSeries, Derivatives, Challenge, W18}
+\begin{question}
+
+Not every function is equal to its MacLaurin series, provided the series has a nonzero radius of convergence. Let 
+\[
+f(x)=\begin{cases} e^{-\frac 1 {x^2}} & x\ne 0 \\ 0 & x=0\end{cases}.
+\]
+Compute the MacLaurin series for $f$ using the definition.
+	
+\index{Series}
+	
+\begin{tags}
+	    Series, PowerSeries, TaylorSeries, Derivatives, Challenge, W18
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	   
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
