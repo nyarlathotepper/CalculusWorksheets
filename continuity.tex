@@ -1,0 +1,342 @@
+\section{Continuity}\index{Continuity}
+\fancyhead[R]{\large Continuity}
+
+\begin{tagblock}{Continuity, Definition, Graph}
+\begin{question}
+	In previous worksheets we have looked at limits of functions.  In this Worksheet we will introduce a ``nice'' class of functions.  
+
+
+
+Consider the three functions $f, g$ and $h$ given below.  
+
+\begin{figure}[h]
+\includegraphics[width=5cm]{cont1f.png} \hspace{.05in} \includegraphics[width=5cm]{cont1g.png} \hspace{.05in} \includegraphics[width=5cm]{cont1h.png}
+\end{figure}
+\begin{enumerate}
+\item Compute $f(1)$ and $\displaystyle \lim_{x \to 1} f(x)$.
+\item Compute $g(1)$ and $\displaystyle \lim_{x \to 1} g(x)$.
+\item Compute $h(1)$ and $\displaystyle \lim_{x \to 1} h(x)$.
+
+\end{enumerate}
+
+
+\bigskip
+The above functions illustrate different behavior at $a=1$.  Intuitively, a function is continuous if we can draw it without ever lifting our pencil from the page. Alternatively, we might say that the graph of a continuous function has no jumps, holes or asymptotes in it.  Both $f$ and $g$ have a 	\emph{hole} at $a=1$ and we say that $f$ and $g$ are \emph{not continuous at $a=1$}.  $h$ does not have a hole at $a=1$, and we say that $h$ is \emph{continuous at $a=1$}.  More precisely:
+
+\textbf{Definition:}  A function $f$ is \emph{continuous at $x=a$} if 
+\begin{enumerate}
+\item The limit $\displaystyle \lim_{x \to a} f(x)$ exists
+\item $f$ is defined at $x =a$
+\item $\displaystyle \lim_{x \to a} f(x)=f(a)$
+\end{enumerate}
+
+%Conditions (a) and (b) are technically contained implicitly in (c), but we state them explicitly to emphasize their individual importance. In words, (c) essentially says that a function is continuous at $x=a$ provided that its limit as $x\to a$ exists and equals its function value at $x=a$. 
+
+If a function is continuous at every point in an interval $(a,b)$, we say the function is \emph{continuous on $(a,b)$.}  If a function is continuous at every point in its domain, we simply say the function is \emph{continuous.} 
+
+\textbf{Thus, continuous functions are particularly nice: to evaluate the limit of a continuous function at a point, all we need to do is evaluate the function.}
+	
+	
+\begin{tags}
+	   Continuity, Definition, Graph
+\end{tags}
+	
+\begin{diary}
+	 
+\end{diary}
+
+
+	
+
+	\end{question}
+	
+	\end{tagblock}
+
+
+
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+\begin{tagblock}{Continuity, Definition, Graph}
+\begin{question}
+	
+	Consider the graph $f$ given by the graph below
+\begin{figure}[h]
+\centering
+\includegraphics[width=6cm]{cont2.png}
+\end{figure}
+
+\begin{enumerate}
+
+\item For each of the values $a=-3,-2,-1,0,1,2,3,$ determine whether or not $\lim_{x \to a} f(x)$ exists.  If the function does not have a limit at a given point, write a sentence to explain why.
+\begin{enumerate}
+\item  $\displaystyle \lim_{x \to -3} f(x)=$ 
+
+\bigskip
+
+\item  $\displaystyle \lim_{x \to -2} f(x)=$ 
+
+\bigskip
+
+
+\item  $\displaystyle \lim_{x \to -1} f(x)=$ 
+
+\bigskip
+
+\item  $\displaystyle \lim_{x \to 0} f(x)=$ 
+
+\bigskip
+
+\item  $\displaystyle \lim_{x \to 1} f(x)=$ 
+
+\bigskip
+
+\item  $\displaystyle \lim_{x \to 2} f(x)=$ 
+
+\bigskip
+
+\item  $\displaystyle \lim_{x \to 3} f(x)=$ 
+
+\bigskip
+
+\end{enumerate}
+
+\item For $a=-3,-2,-1,0,1,2,3$ determine $f(a)$.  
+\vspace{.75in}
+
+\item At which values of $a$ is $f(a)$ not defined?
+\vspace{.75in}
+
+
+\item At which values of $a$ does $f$ have a limit, but $\lim_{x \to a} f(x) \neq f(a) $?
+\vspace{.75in}
+
+\item State all values of $a$ for which $f$ is not continuous at $x=a$.
+\vspace{.75in}
+
+\item  Using interval notation, give the intervals in which $f(x)$ is continuous.
+\vspace{.75in}
+
+\item Which condition is stronger, and hence implies the other: $f$ has a limit at $x=a$ or $f$ is continuous at $x=a$? Explain, and hence complete the following sentence: 
+\bigskip
+
+``If $f$ \rule{4cm}{.1mm} at $x=a$, then $f$  \rule{4cm}{.1mm} at  $x=a$,'' 
+
+where you complete the blanks with \emph{has a limit} and is \emph{continuous}, using each phrase once.
+\end{enumerate}
+	
+\begin{tags}
+	   Continuity, Definition, Graph
+\end{tags}
+	
+\begin{diary}
+	  
+\end{diary}
+
+
+	
+
+	\end{question}
+	
+	\end{tagblock}
+
+
+
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+\begin{tagblock}{Continuity, Definition, Theory}
+\begin{question}
+	
+Next, we'll look more at what types of functions are continuous.  Thinking back to functions we've investigated: polynomials, rational functions, trig functions, piecewise functions, which ones do you think are continuous, and why? 
+	
+\begin{tags}
+	   Continuity, Definition, Theory
+\end{tags}
+	
+\begin{diary}
+	  
+\end{diary}
+
+
+	
+
+	\end{question}
+	
+	\end{tagblock}
+
+
+
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+\begin{tagblock}{Continuity, Definition, Polynomial}
+\begin{question}
+	
+\textbf{Definition:}  A function $f$ is \emph{continuous at $x=a$} if 
+\begin{enumerate}
+\item The limit $\displaystyle \lim_{x \to a} f(x)$ exists
+\item $f$ is defined at $x =a$
+\item $\displaystyle \lim_{x \to a} f(x)=f(a)$
+\end{enumerate}
+
+ Intuitively, a function is continuous if we can draw it without ever lifting our pencil from the page. Alternatively, we might say that the graph of a continuous function has no jumps, holes or asymptotes in it. \\
+ 
+ \bigskip
+  
+  If a function is continuous at every point in an interval $(a,b)$, we say the function is \emph{continuous on $(a,b)$.}  If a function is continuous at every point in its domain, we simply say the function is \emph{continuous.}
+
+\bigskip
+
+In this Worksheet we'll determine which type of functions are continuous. 
+\bigskip
+
+ 
+
+ If $p(x)$ is a \textbf{polynomial} how do $\displaystyle \lim_{x \to a} p(x)$ and  $p(a)$ compare?  Is a polynomial a continuous function?  
+	
+\begin{tags}
+	   Continuity, Definition, Polynomial
+\end{tags}
+	
+\begin{diary}
+	  
+\end{diary}
+
+
+	
+
+	\end{question}
+	
+	\end{tagblock}
+
+
+
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+\begin{tagblock}{Continuity, Definition, RationalFunctions}
+\begin{question}
+	
+Consider the rational function $\displaystyle q(x)= \frac{x^2-3x+2}{2x+4}$
+\begin{enumerate}
+\item What is the domain of $q(x)$
+\item Compute $\displaystyle \lim_{x \to 1} q(x)$ (Hint: Use the Limit Laws)
+\item If $x=a$ is in the domain of $q(x)$, verify that  $\displaystyle \lim_{x \to a} q(x)=q(a)$
+\end{enumerate}
+	
+\begin{tags}
+	   Continuity, Definition, RationalFunctions
+\end{tags}
+	
+\begin{diary}
+	  
+\end{diary}
+
+
+	
+
+	\end{question}
+	
+	\end{tagblock}
+
+
+
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+\begin{tagblock}{Continuity, Piecewise, Graph}
+\begin{question}
+	
+As a next example we'll look at piecewise functions.  Consider
+\[ g(x) = \begin{cases} 
+x^2 & \text{ for }  x< 1 \\
+x+1 & \text{ for }  1 \leq x< 2 \\
+1 &  \text{ for } x=2 \\
+5-x & \text{ for } x>2 \end{cases}\]
+Note that each piece is a polynomial so will be continuous, but we will need to check carefully where the function changes definition.
+
+\begin{enumerate}
+\item For each of the values $a= 1,2$ compute $g(a)$.
+\vspace{.5in}
+
+\item  For each of the values $a= 1,2$ determine $\lim_{x \to a^-} g(x)$ and  $\lim_{x \to a^+} g(x)$.  \emph{Make sure you use proper notation.}
+
+\vspace{1.5in}
+
+
+\item For each of the values $a= 1,2$ determine $\lim_{x \to a} g(x)$. If the limit fails to exist, explain why by discussing the left- and right-hand limits at the relevant $a$-value.
+
+\vspace{1.5in}
+
+\item For which values of $a$ is the following statement true?
+\[\lim_{x \to a} g(x) \neq g(a)\]
+
+\vspace{.5in}
+
+
+\item For which intervals is $g(x)$ continuous?
+\vspace{.5in}
+
+\item On the axis above sketch an accurate, labeled graph of $y=g(x)$. Be sure to carefully use open circles and filled circles to represent key points on the graph, as dictated by the piecewise formula.
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{cont4.png}
+\end{figure}
+	
+\begin{tags}
+	   Continuity, Piecewise, Graph
+\end{tags}
+	
+\begin{diary}
+	  
+\end{diary}
+
+
+	
+
+	\end{question}
+	
+	\end{tagblock}
+
+
+
+
+%-------------------------------------------------------------------------------------------------------------
+
+\begin{tagblock}{Continuity, Piecewise}
+\begin{question}
+	
+What values of $c$ and $m$ do you need to make
+\[ h(x) = \begin{cases} 
+cx^2 & \text{ for }   x< 1 \\
+4 & \text{ for }  x=1 \\
+-x^3+mx & \text{ for } x>1 \end{cases}\]
+continuous?  
+	
+\begin{tags}
+	   Continuity, Piecewise
+\end{tags}
+	
+\begin{diary}
+	   
+\end{diary}
+
+
+	
+
+	\end{question}
+	
+	\end{tagblock}
+
+
+
+
+%-------------------------------------------------------------------------------------------------------------

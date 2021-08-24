@@ -1,0 +1,1061 @@
+
+\section{Limits}\index{Limits}
+\fancyhead[R]{\large Limits}
+
+
+\begin{tagblock}{Limits, VerticalAsymptotes, HorizontalAsymptotes, InfiniteDiscontinuity, Definition, Table}
+\begin{question}
+	In the previous worksheets we introduced limits: given a function $f$, a fixed input $x=a$, and a real number $L$, we say that $f$ has  \emph{limit $L$ as $x$ approaches $a$}, and write 
+\[\lim_{x \to a}f(x) = L\]
+provided that we can make $f(x)$ as close to $L$ as we like by taking $x$ sufficiently close (but not equal) to $a$. If we cannot make $f(x)$ as close to a single value as we would like as $x$ approaches $a$, then we say that \emph{$f$ does not have a limit as $x$ approaches $a$.}
+
+\begin{enumerate}
+\item Consider the function $\displaystyle f(x) = \frac{1}{x^2}$
+\begin{enumerate}
+\item Compute the following table of values:
+
+
+\begin{tabular}{c | c c | c  }
+$x$ & $f(x)$  \hspace{2in} & $x$ & $f(x)$ \\ \hline
+.5 & \hspace{.5in} & -.5 &  \\ &&& \\
+.25 & & -.25  & \\ &&&\\
+.1 & & -.1& \\&&& \\
+.01 && -.01 &\\ &&&\\
+.001 && -.001 &\\ &&&\\
+\end{tabular}
+\item Does the limit as $x \to 0$ appear to exist?  Why or why not?
+\end{enumerate}
+
+\vspace{1in} 
+
+\item Consider the function $\displaystyle g(x) = \frac{1}{x}$
+\begin{enumerate}
+\item Compute the following table of values:
+
+
+\begin{tabular}{c | c c | c  }
+$x$ & $g(x)$  \hspace{2in} & $x$ & $g(x)$ \\ \hline
+.5 & \hspace{.5in} & -.5 &  \\ &&& \\
+.25 & & -.25  & \\ &&&\\
+.1 & & -.1& \\&&& \\
+.01 && -.01 &\\ &&&\\
+.001 && -.001 &\\ &&&\\
+\end{tabular}
+\item Does the limit as $x \to 0$ appear to exist?  Why or why not?
+\end{enumerate}
+
+
+\newpage
+ Below are the graphs of $\displaystyle f(x) = \frac{1}{x^2}$ and $\displaystyle g(x) = \frac{1}{x}$
+
+\begin{figure}[h]
+\includegraphics[width=6cm]{limits1_x2.png} \hfill \includegraphics[width=6cm]{limits1_x.png}
+\end{figure}
+In Problem 1 you saw that as $x$ got closer to $0$, $f(x)$ got larger and larger, we write this as 
+\[ \lim_{x \to 0} f(x) = \lim_{x \to 0} \frac{1}{x^2} = \infty \]
+
+In Problem 2 you saw that if $x$ was a positive number getting closer to $0$, $g(x)$ got larger and larger, and $x$ was a negative number getting closer to $0$, $g(x)$ became a large negative number.  Using our left and right hand limits we have
+\[\lim_{x \to 0^+} g(x) = \lim_{x \to 0^+} \frac{1}{x} = \infty \, \text{ and } \, \lim_{x \to 0^-} g(x) = \lim_{x \to 0^-} \frac{1}{x} = -\infty\]
+
+In both of these examples we call the vertical line $x=0$ a \emph{vertical asymptote}.
+
+In general $x=a$ is a \emph{vertical asymptote} for a function $f(x)$ if one of the following is true:
+
+\[\lim_{x \to a} f(x) = \infty \hspace{.5in} \lim_{x \to a^-} f(x)  = \infty \hspace{.5in}  \lim_{x \to a^+} f(x)  = \infty\]
+\[\lim_{x \to a} f(x) = -\infty \hspace{.5in} \lim_{x \to a^-} f(x)  = -\infty \hspace{.5in}  \lim_{x \to a^+} f(x)  = -\infty\]
+
+\bigskip
+\item The graph of $h(x)$ is given below, compute the following.  If a limit does not exist, explain why.  
+\begin{minipage}{.6\textwidth}
+\includegraphics[width=8cm]{limitsVA.jpg}\end{minipage}% This must go next to `\end{minipage}`
+\begin{minipage}{.4\textwidth}
+
+\bigskip
+ $\displaystyle \lim_{x \to -3^-} h(x) =  \rule{1.5cm}{.1mm}$  
+ \bigskip
+ 
+ $\displaystyle \lim_{x \to -3^+} h(x) =  \rule{1.5cm}{.1mm}$ 
+ \bigskip
+ 
+  $\displaystyle \lim_{x \to -3} h(x) =  \rule{1.5cm}{.1mm}$ 
+\bigskip
+ 
+ $\displaystyle \lim_{x \to 2} h(x) =  \rule{1.5cm}{.1mm}$ 
+ \bigskip
+ 
+ $\displaystyle \lim_{x \to 5} h(x) =  \rule{1.5cm}{.1mm}$ 
+ \bigskip
+  \end{minipage}
+\bigskip
+  
+ Vertical Asymptotes of $h(x)$:   \rule{6cm}{.1mm}
+
+\newpage
+
+\item Let $\displaystyle f(x) = \frac{1}{x-3}$.  Compute the following limits, and if a limit does not exist, explain why. 
+\[ \lim_{x \to 3^-}  \frac{1}{x-3} = \hspace{1in}  \lim_{x \to 3^+}  \frac{1}{x-3} = \hspace{1in}  \lim_{x \to 3}  \frac{1}{x-3} = \]
+
+
+\vspace{1in}
+
+
+We could also ask the question what happens to a function as $x$ gets very large
+\item Consider the function $\displaystyle g(x) = \frac{1}{x}$.   Evaluate $g(x)$ at $x=10, 100,$ and $1000$.  What do you notice?
+
+\vspace{1in}
+\item Consider the function $h(x)$ given by the graph below.  As $x$ gets larger what do you notice about $h(x)$?
+\begin{figure}[h]
+\centering
+\includegraphics[width=6cm]{limitsHA.png}
+\end{figure}
+
+For a function $f(x)$ we will write $\lim_{x \to \infty} f(x) = L$  provided that we can make $f(x)$ as close to $L$ as we like by taking $x$ sufficiently large.  If $L$ is a finite number then we say that $f(x)$ has a \emph{horizontal asymptote} at $y=L$.  Similarly we can consider what happens as $x \to -\infty$.  
+
+\item 
+\begin{enumerate}
+\item Returning to $\displaystyle g(x) = \frac{1}{x}$.   Compute 
+\[ \lim_{x \to \infty} \frac{1}{x} = \hspace{1in} \text{ and }  \hspace{1in} \lim_{x \to -\infty} \frac{1}{x} = \]
+What horizontal asymptote(s) does $g(x)$ have?
+\[y = \rule{3cm}{.1mm} \]
+
+\bigskip
+
+\item Next consider $\displaystyle g(x) = \frac{1}{x^2}$.   Compute 
+\[ \lim_{x \to \infty} \frac{1}{x^2} = \hspace{1in} \text{ and }  \hspace{1in} \lim_{x \to -\infty} \frac{1}{x^2} = \]
+What horizontal asymptote(s) does $g(x)$ have?
+\[y = \rule{3cm}{.1mm} \]
+
+
+\item Generalize this to  $\displaystyle g(x) = \frac{1}{x^r}$, where $r>0$
+\[ \lim_{x \to \infty} \frac{1}{x^r} = \hspace{1in} \text{ and }  \hspace{1in} \lim_{x \to -\infty} \frac{1}{x^r} = \]
+\end{enumerate}
+
+\bigskip
+  
+\item Let $p(x)=x^2$.  Sketch a graph of $p(x)$ and compute
+\[ \lim_{x \to \infty} p(x) = \hspace{1in} \text{ and }  \hspace{1in} \lim_{x \to -\infty} p(x) = \]
+Does $p(x)$ have any horizontal asymptotes?
+
+
+
+\end{enumerate}
+
+\vspace{1.5in}
+
+
+
+
+
+
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, VerticalAsymptotes, HorizontalAsymptotes, InfiniteDiscontinuity, Definition, Table
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+\begin{tagblock}{Limits, VerticalAsymptotes, HorizontalAsymptotes, InfiniteDiscontinuity, Example, AlgebraicLimits, RationalFunctions}
+\begin{question}
+	
+\bigskip
+
+In the previous worksheets we introduced vertical and horizontal asymptotes.  In this Worksheet we want to determine if a function has vertical and/or horizontal asymptotes given the equation.  Recall that to find a horizontal asymptote, we compute the limit as $x \to \infty$ and as $x \to -\infty$.  More precisely, 
+\[ \text{if } \lim_{x \to \infty} f(x) = L, \text{ where $L$ is a finite number, then $f(x)$ has a horizontal asymptote at $y=L$, and} \]
+\[ \text{if } \lim_{x \to -\infty} f(x) = M, \text{ where $M$ is a finite number, then $f(x)$ has a horizontal asymptote at $y=M$.} \]
+
+Today we'll focus on functions that are fractions $\displaystyle f(x) = \frac{N(x)}{D(x)}$, so we will have a vertical asymptotes at any $x=a$ which makes  the denominator $0$, i.e. $D(a)=0$ \textbf{and}  the numerator is not $0$, i.e. $N(a)\neq 0$.  
+
+Given an equation of a function, to determine the horizontal asymptotes.  We will use the fact that for any $r>0$, we have
+\[ \lim_{x \to \infty} \frac{1}{x^r} = 0 \text{ and }  \lim_{x \to -\infty} \frac{1}{x^r} = 0 \]
+
+The main algebraic tool we will use to compute limits as $x \to \infty$ is to multiply by $1$ where $1=\frac{1/x^d}{1/x^d}$ and $d$ is the ``highest power of $x$''
+
+ Consider $\displaystyle f(x) = \frac{2x^3-3}{x^3+1}$ .  The highest power of $x$ that we see is $3$, so we'll start by dividing both the numerator and denominator by $\frac{1}{x^3}$
+ 
+ \[ \lim_{x \to \infty} f(x) =  \lim_{x \to \infty} \frac{2x^3-3}{x^3+1} =  \lim_{x \to \infty} \frac{2x^3-3}{x^3+1} \cdot \frac{\frac{1}{x^3}}{\frac{1}{x^3}} = \lim_{x \to \infty} \frac{2-\frac{3}{x^3}}{1+\frac{1}{x^3}}\]
+
+Now, $\lim_{x \to \infty} \frac{1}{x^3} =0$, so  $\lim_{x \to \infty} \frac{3}{x^3}$ is also $0$.  Thus 
+\[\lim_{x \to \infty} f(x) =  \lim_{x \to \infty} \frac{2-\frac{3}{x^3}}{1+\frac{1}{x^3}} =  \lim_{x \to \infty} \frac{2-0}{1+0} = 2 \]
+
+So we have a horizontal asymptote at $y=2$ as $x \to \infty$
+
+Similarly, $ \lim_{x \to -\infty} f(x) = 2$ and we  have a horizontal asymptote at $y=2$ as $x \to -\infty$.
+
+\begin{enumerate}
+\item Let $\displaystyle g(x) = \frac{2x^2-3}{x^3+1}$.
+\begin{enumerate}
+\item What vertical asymptotes does $g(x)$ have?
+\item What is the highest power of $x$ in $g(x)$?
+\item Compute $\lim_{x \to \infty} g(x)$ and $\lim_{x \to -\infty} g(x)$.
+\item Does $g(x)$ have a horizontal asymptote?  If so what are they?
+\end{enumerate}
+
+\newpage
+
+\item Let $\displaystyle h(x) = \frac{2x^3-3}{x^2+1}$.
+\begin{enumerate}
+\item What vertical asymptotes does $h(x)$ have?
+\item What is the highest power of $x$ in $h(x)$?
+\item Compute $\lim_{x \to \infty} h(x)$ and $\lim_{x \to -\infty} h(x)$.
+\item Does $h(x)$ have a horizontal asymptote?  If so what are they?
+\end{enumerate}
+
+\vspace{4in}
+
+\item The three previous functions we looked at were all rational functions:  $\displaystyle f(x) = \frac{2x^3-3}{x^3+1}$, $\displaystyle g(x) = \frac{2x^2-3}{x^3+1}$ and $\displaystyle h(x) = \frac{2x^3-3}{x^2+1}$.  What do you notice about their horizontal asymptotes?  Can you come up with a general statement that determines how to find a horizontal asymptote of a rational function?
+
+
+
+
+\newpage
+\item Let $\displaystyle f(x) = \frac{\sqrt{5x^2+3}}{x-2}$.  Recall if $x$ is positive then $\sqrt{x^2} = x$ and if $x$ is negative then $-\sqrt{x^2} = x$.  
+\begin{enumerate}
+\item What vertical asymptotes does $f(x)$ have?
+\item What is the highest power of $x$ in $f(x)$? (Careful here)
+\item Compute $\lim_{x \to \infty} f(x)$.
+\item Compute $\lim_{x \to -\infty} f(x)$ (you should get a different answer than you got in (c)).
+\item What horizontal asymptotes does $f(x)$ have?
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+	
+\index{Limits}
+	
+\begin{tags}
+Limits, VerticalAsymptotes, HorizontalAsymptotes, InfiniteDiscontinuity, Example, AlgebraicLimits, RationalFunctions
+
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+\begin{tagblock}{Limits, Definition}
+\begin{question}
+	
+Given a function $f(x)$ we can evaluate $f$ at an $x$-value $a$.  In this worksheet we will introduce the limit of $f(x)$ as $x$ approaches $a$, which may be different than evaluating at $a$.  
+
+
+\begin{enumerate}
+\item Let $f(x)$ be the function given by the graph below. Use the graph to answer each of the following questions.
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{limits1.png}
+\end{figure}
+
+\begin{enumerate}
+\item     Determine the values $f(-2), f(-1), f(0), f(1)$ and $f(2)$ if defined.   If the function value is not defined, explain what feature of the graph tells you this.
+
+\vspace{1in}
+
+\item For each of the values $a=-1$, $a=0$, and $a=2$, complete the following sentence: \\
+ ``As $x$ gets closer and closer (but not equal) to $a=-1$, $f(x)$
+gets as close as we want to  \rule{1.1cm}{0.1mm} .'' \\ \bigskip
+``As $x$ gets closer and closer (but not equal) to $a=0$, $f(x)$
+gets as close as we want to  \rule{1.1cm}{0.1mm} .'' \\ \bigskip
+``As $x$ gets closer and closer (but not equal) to $a= 2$, $f(x)$
+gets as close as we want to  \rule{1.1cm}{0.1mm} .'' \\ \bigskip
+
+
+
+
+\item What happens as $x$ gets closer and closer (but not equal) to $a=1$? Does the function $f(x)$ get as close as we would like to a single value?
+
+\end{enumerate}
+\end{enumerate}
+
+
+\newpage
+In the previous problem we saw that for the given function $f$, as $x$ gets closer and closer (but not equal) to $0$, $f(x)$ gets as close as we want to the value $4$. At first, this may feel counterintuitive, because the value of $f(0)$ is $1$, not $4$. By their very definition, limits regard the behavior of a function arbitrarily close to a fixed input, but the value of the function at the fixed input does not matter. More formally, we say the following:
+
+
+
+Given a function $f$, a fixed input $x=a$, and a real number $L$, we say that $f$ has  \emph{limit $L$ as $x$ approaches $a$}, and write 
+\[\lim_{x \to a}f(x) = L\]
+provided that we can make $f(x)$ as close to $L$ as we like by taking $x$ sufficiently close (but not equal) to $a$. If we cannot make $f(x)$ as close to a single value as we would like as $x$ approaches $a$, then we say that \emph{$f$ does not have a limit as $x$ approaches $a$.}
+
+For the function $f$ from the previous problem we have
+\[ \lim_{x \to -1} f(x) = 3, \hspace{.2in}  \lim_{x \to 0} f(x) = \rule{1.5cm}{.1mm}  \hspace{.2in} \lim_{x \to 2} f(x) =  \rule{1.5cm}{.1mm}\]
+
+
+
+In a situation such as the jump in the graph of $f$ at $x=1$, the issue is that if we approach $x=1$ from the left, the function values tend to get as close to $3$ as we'd like, but if we approach $x=1$ from the right, the function values get as close to $2$ as we'd like.
+
+We call these left and right hand limits, and denote them as follows:
+\smallskip
+
+$\displaystyle \lim_{x \to a^-} f(x)$ ``the limit as $x$ approaches $a$ from the left''  (think of the $-$ indicating that we are smaller than $a$)\\
+\bigskip
+
+$\displaystyle \lim_{x \to a^+} f(x)$ ``the limit as $x$ approaches $a$ from the right'' (think of the $+$ indicating that we are bigger than $a$) \\
+
+\bigskip
+
+
+For our function $f$, we have
+\[ \lim_{x \to 1^-} f(x) = 3 \hspace{.2in}  \lim_{x \to 1^+} f(x) = 2 \]
+
+Since $\displaystyle  \lim_{x \to 1^-} f(x) \neq  \lim_{x \to 1^+} f(x)$,  the limit of $f$ does not exist at $x=1$.
+\bigskip
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, Definition
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+\begin{tagblock}{Limits, Definition}
+\begin{question}
+	
+  \setcounter{enumi}{1}
+Let $h(x)$ be the function given by the graph below. Use the graph to answer each of the following questions.  \textbf{If the function value or limit does not exist, explain why.}
+
+\begin{minipage}{.4\textwidth}
+\includegraphics[width=6cm]{limits4.png}\end{minipage}% This must go next to `\end{minipage}`
+\begin{minipage}{.6\textwidth}
+\begin{tabular}{lll}
+ $h(-1) =  \rule{1.5cm}{.1mm}$ &\hspace{.2in} & $\displaystyle \lim_{x \to -1} h(x) =  \rule{1.5cm}{.1mm}$ \\ \\
+ $h(3) =  \rule{1.5cm}{.1mm}$ &\hspace{.2in}&  $\displaystyle \lim_{x \to 3^-} h(x) =  \rule{1.5cm}{.1mm}$ \\ \\
+  $\displaystyle \lim_{x \to 3^+} h(x) =  \rule{1.5cm}{.1mm}$ & \hspace{.2in} &$\displaystyle \lim_{x \to 3} h(x) =  \rule{1.5cm}{.1mm}$ \\
+  \end{tabular}
+\end{minipage}	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, Definition
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+\begin{tagblock}{Limits, Definition}
+\begin{question}
+	Sketch the graph of a function $f$ that satisfies the following conditions: \\
+\[  f(0)=-1,   \, f(3) =1 , \, \lim_{x \to 0} f(x) =1, \, \lim_{x \to 3^-} f(x) = -2, \text{ and } \lim_{x \to 3^+} f(x) = 2 \]
+
+\emph{(Note: There are many possibilites for $f$)}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{limitsintroblank.png}
+\end{figure}
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, Definition
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+\begin{tagblock}{Limits, Definition, Table}
+\begin{question}
+	We will next investigate limits when we are given an equation of a function.
+
+
+\item Consider the function $\displaystyle f(x) = \frac{x^2-4}{x-2}$.  
+\begin{enumerate}
+\item What is the domain of $f$?  Can we evaluate $f(2)$?  
+\bigskip
+
+\item Compute the following table of values:
+
+
+\begin{tabular}{c | c c | c  }
+$x$ & $f(x)$  \hspace{2in} & $x$ & $f(x)$ \\ \hline
+1.5 & \hspace{.5in} & 2.5 &  \\ &&& \\
+1.75 & & 2.25  & \\ &&&\\
+1.9 & & 2.1& \\&&& \\
+1.99 && 2.01 &\\ &&&\\
+\end{tabular}
+  \item Based on your values for $f(x)$, what do you guess the $\displaystyle \lim_{x \to 2} f(x)$ is?
+  
+\vspace{.2in}
+
+\item We can also graph $f(x)$ to determine the limit.  Returning to the equation of $f(x)$:  $\displaystyle f(x) = \frac{x^2-4}{x-2}$ we see that we can factor the numerator, \[\displaystyle f(x) = \frac{x^2-4}{x-2} = \frac{(x-2)(x+2)}{x-2},\]
+as long as $x \neq 2$  we then have $ \displaystyle \frac{(x-2)}{x-2} =1$, so that for $x \neq 2$, $\displaystyle f(x) = \frac{(x-2)(x+2)}{x-2} = x+2$.  
+
+This means graph of $f(x)$ is the line $x+2$ but with a hole at $x=2$.  Draw the graph of $f(x)$ below.   
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{limits2.png}
+\end{figure}
+\item Based on your graph, what is $\displaystyle \lim_{x \to 2} f(x)$?
+
+\end{enumerate}
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, Definition, Table
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+\begin{tagblock}{Limits, Definition, Table}
+\begin{question}
+	\item Consider the function $\displaystyle g(x) = \cos (\frac{1}{x})$. 
+ \begin{enumerate}
+\item What is the domain of $g$?  Can we evaluate $g(0)$?  
+\bigskip
+
+\item Compute the following table of values (Remember always work in radians in calculus)
+
+
+\begin{tabular}{c | c c | c  }
+$x$ & $g(x)$  \hspace{2in} & $x$ & $g(x)$ \\ \hline
+.5 & \hspace{.5in} & -.5 &  \\ &&& \\
+.25 & & -.25  & \\ &&&\\
+.1 & & -.1& \\&&& \\
+.01 && -.01 &\\ &&&\\
+\end{tabular}
+  \item Based on your values for $g(x)$, do you think the $\displaystyle \lim_{x \to 0} g(x)$ exists?  Explain why or why not.  
+  
+  \vspace{1in}
+  \item We can also graph $g(x)$.  Based on the graph, do you think the $\displaystyle \lim_{x \to 0} g(x)$ exists?
+  \begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{limits3.png}
+\end{figure}
+
+
+\end{enumerate}
+
+
+
+
+Using a table of values is not perfect, as we might have missed something.  We'll learn a better method for computing limits in the next Worksheet. 
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, Definition, Table
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+\begin{tagblock}{Limits, Graph, WarmUp}
+\begin{question}
+	In the previous Worksheet we introduced limits: given a function $f$, a fixed input $x=a$, and a real number $L$, we say that $f$ has  \emph{limit $L$ as $x$ approaches $a$}, and write 
+\[\lim_{x \to a}f(x) = L\]
+provided that we can make $f(x)$ as close to $L$ as we like by taking $x$ sufficiently close (but not equal) to $a$. If we cannot make $f(x)$ as close to a single value as we would like as $x$ approaches $a$, then we say that \emph{$f$ does not have a limit as $x$ approaches $a$.}
+
+
+
+
+As a warm up consider the function $h(x)$ given by the the graph below. Use the graph to answer each of the following questions.  If the function value or limit does not exist, explain why.
+
+
+\begin{minipage}{.5\textwidth}
+\includegraphics[width=6cm]{alglimitswarmup.png}\end{minipage}
+
+\begin{minipage}{.5\textwidth}
+\begin{tabular}{llll}
+   $h(-1) =  \rule{1.5cm}{.1mm}$ & \hspace{.2in} & $h(1) =  \rule{1.5cm}{.1mm}$  & \hspace{1in}   \\ \\
+  $\displaystyle \lim_{x \to -1^-} h(x) =  \rule{1.5cm}{.1mm}$ &\hspace{.2in} &  $\displaystyle \lim_{x \to 1^-} h(x) =  \rule{1.5cm}{.1mm}$ & \hspace{.2in} \\ \\ 
+   $\displaystyle \lim_{x \to -1^+} h(x) =  \rule{1.5cm}{.1mm}$ &\hspace{.2in}  &  $\displaystyle \lim_{x \to 1^+} h(x) =  \rule{1.5cm}{.1mm}$ & \hspace{.2in} \\ \\
+  $\displaystyle \lim_{x \to -1} h(x) =  \rule{1.5cm}{.1mm}$ &\hspace{.2in}  &  $\displaystyle \lim_{x \to 1} h(x) =  \rule{1.5cm}{.1mm}$ & \hspace{.2in}  \\
+  \end{tabular}
+\end{minipage}  
+
+
+\emph{Explanation for those that don't exist:}
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, Graph, WarmUp
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+\begin{tagblock}{Limits, AlgebraicLimits, Graph}
+\begin{question}
+	Given an equation for a function $f(x)$, we'd like to \emph{algebraically} determine the $\lim_{x \to a} f(x)$.  
+
+Let's start with two easy functions $f(x) = C$ where $C$ is a constant and $g(x) =x$
+\begin{enumerate}
+\item On the left is the graph of $f(x) = C$, for some constant $C$.  From the graph compute $\lim_{x \to 1} f(x)$,   $\lim_{x \to 2} f(x)$ and then  $\lim_{x \to a} f(x)$ for any $a$.  
+\item Graph $g(x) = x$ below on the right labeling your axes.  From the graph compute $\lim_{x \to 1} g(x)$,   $\lim_{x \to 2} g(x)$ and then  $\lim_{x \to a} g(x)$ for any $a$. 
+\end{enumerate}
+
+\includegraphics[width=6cm]{limitsconstant.png} \hspace{.5in} \includegraphics[width=6cm]{limitsblank.png} 
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, AlgebraicLimits, Graph
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+\begin{tagblock}{Limits, AlgebraicLimits}
+\begin{question}
+	Computing limits behave nicely with algebra.  In particular we have the following
+\bigskip
+
+ \textbf{Limit Laws}:  if $\lim_{x \to a} f(x)$ and $\lim_{x \to a} g(x)$ both exist then
+\begin{enumerate}
+\item[LL 1.] Sum/Difference Law: $\displaystyle \lim_{x \to a} (f(x) \pm g(x) ) = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x) $
+\item[LL 2.] Constant Multiple Law: $\displaystyle \lim_{x \to a} (c(f(x)) = c \lim_{x \to a} (f(x)$ for any constant $c$
+\item[LL 3.]Product Law:  $\displaystyle \lim_{x \to a} (f(x) \cdot g(x) ) = \lim_{x \to a} f(x) \cdot \lim_{x \to a} g(x) $
+\item[LL 4.]Quotient Law: $\displaystyle \lim_{x \to a} \frac{f(x)}{g(x) } =  \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x) }$ provided $\lim_{x \to a} g(x) \neq 0$
+\end{enumerate}
+
+\newpage
+
+\item Let $h(x) = 3x^2 + 4$. 
+\begin{enumerate}
+\item Use the Limit Laws and what we discovered in Question 2. to compute $ \lim_{x \to 2} h(x)$ justifying each step (tell me which Limit Law you use at each step).  For example, we can start using LL 1.
+\begin{eqnarray*}
+ \lim_{x \to 2} h(x) &=&  \lim_{x \to 2} (3x^2 + 4) \\
+ &=&  \lim_{x \to 2} (3x^2) +  \lim_{x \to 2} (4) \hspace{.5in} \text{by LL 1. Sum/Difference} \\ \\
+ & = & 
+ \end{eqnarray*}
+\vspace{2.5in}
+
+\item Compute $h(2)$.  How does this compare to $ \lim_{x \to 2} h(x)$?
+
+\vspace{.5in}
+\item If $p(x)$ is any \textbf{polynomial} what can you say about $\lim_{x \to a} p(x)$ and $p(a)$?  Explain your answer.  
+
+\vspace{2in}
+
+\item Use the Limit Laws to compute $\displaystyle \lim_{x \to 2} \frac{3x^2+4}{x+2}$  
+\end{enumerate}
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, AlgebraicLimits
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+\begin{tagblock}{Limits, AlgebraicLimits}
+\begin{question}
+	In the last worksheet we investigated the function $\displaystyle f(x) = \frac{x^2-4}{x-2}$ and the $\lim_{x \to 2} f(x)$.  
+Why can't we use the Quotient Law to compute the  $\lim_{x \to 2} f(x)$?  
+
+\vspace{1in}
+
+ However, we did a little algebra and factored the numerator as $(x-2)(x+2)$ so that
+ \[ \lim_{x \to 2} \frac{x^2-4}{x-2} =  \lim_{x \to 2} \frac{(x-2)(x+2)}{x-2} = \lim_{x \to 2} x+2 = 2+2 = 4 \]
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, AlgebraicLimits
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+\begin{tagblock}{Limits, AlgebraicLimits}
+\begin{question}
+	\emph{Roughly the idea is to algebraically manipulate our function until we can evaluate at $a$.  }
+ 
+ 
+ 
+ 
+  Let $\displaystyle g(x) =  \frac{(1+x)^2 - 1}{x}$.  What is the domain of $g(x)$?   Compute $\displaystyle \lim_{x \to 0} g(x)$. \\
+
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, AlgebraicLimits
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+
+\begin{tagblock}{Limits, AlgebraicLimits}
+\begin{question}
+	 Let $\displaystyle h(t)= \frac{\sqrt{t^2+4}-2}{t^2}$.   What is the domain of $h(t)$?  Compute $\displaystyle  \lim_{t \to 0} h(t)$.\\
+ \emph{Hint: Multiply by a clever choice of $\displaystyle 1 = \frac{\sqrt{t^2+4}+2}{\sqrt{t^2+4}+2}$, we call this the ``conjugate'' }
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, AlgebraicLimits
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+\begin{tagblock}{Limits, AlgebraicLimits}
+\begin{question}
+	 Let $\displaystyle q(x) = \frac{\frac{1}{x} - \frac{1}{3}}{3-x}$.  What is the domain of $q(x)$?   Compute $\displaystyle \lim_{x \to 3} q(x)$.\\
+% \emph{Hint: Rewrite the numerator as one fraction by finding a common denominator }
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, AlgebraicLimits
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+
+\begin{tagblock}{Limits, AlgebraicLimits, Theory}
+\begin{question}
+	 \begin{enumerate}
+
+\item Can you find two functions $f(x)$ and $g(x)$ such that $\displaystyle \lim_{x \to 5} f(x) = 0$ and $\displaystyle \lim_{x \to 5} g(x) = 0$ and 
+
+
+$\displaystyle \lim_{x \to 5} ({f(x)} + {g(x)})  = 13$?  If so, give explicit formulas for $f(x)$ and $g(x)$; if not explain why. 
+
+
+\vspace{3in}
+
+\item Can you find two functions $f(x)$ and $g(x)$ such that $\displaystyle \lim_{x \to 5} f(x) = 0$ and $\displaystyle \lim_{x \to 5} g(x) = 0$ and 
+
+
+$\displaystyle \lim_{x \to 5} \frac{f(x)}{g(x)}  = 13$?  If so, give explicit formulas for $f(x)$ and $g(x)$; if not explain why.  
+
+\end{enumerate}
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, AlgebraicLimits, Theory
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+\begin{tagblock}{Limits, W1}
+\begin{question}
+	Evaluate $\displaystyle\lim_{x\to 5}\frac{x^2-2x-15}{4x^2-20x}$
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, W1
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+\begin{tagblock}{Limits, SquareRoots, W1}
+\begin{question}
+	Evaluate $\displaystyle\lim_{x\to\infty}(\sqrt{x+2}-\sqrt{x})$.
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, SquareRoots, W1
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+
+\begin{tagblock}{Limits, W4, Exponentials, Logarithms}
+\begin{question}
+	Write down the values of the following limits, no rigorous justification is necessary.
+
+\bigskip
+
+a) $\displaystyle\lim_{x\to\infty}2^x$
+
+\bigskip
+
+b) $\displaystyle\lim_{x\to-\infty}e^{-x}$
+
+\bigskip
+
+c) $\displaystyle\lim_{x\to\infty}e^{-x}$
+
+\bigskip
+
+d) $\displaystyle\lim_{x\to\infty}\ln(\sqrt{x})$
+
+\bigskip
+
+e) $\displaystyle\lim_{x\to-\infty}\ln(x)$
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, W4, Exponentials, Logarithms
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+\begin{tagblock}{Limits, W6, Exponentials, L'Hopital, ImproperIntegralInfinite}
+\begin{question}
+	To calculate the Laplace Transform of even a function as simple as $f(t)=t$, we arrive at a limit of the form
+\[
+\lim_{x\to\infty} \frac x {e^{sx}}.
+\]
+
+No algebraic technique can help you with this limit, so we need a new trick: L'H\^opital's Rule! The statement is:
+
+\bigskip
+
+\textbf{L'Hopital's Rule:} Let $f$ be differentiable on an open interval containing $x=c$, or on $(a,\infty)$ for some number $a$ if $c=\infty$. Suppose $g'(x)\ne 0$ on that same interval except possibly at $x=c$. Then if either $\displaystyle\lim_{x\to c}f(x)=\lim_{x\to c}g(x)=0$ or $\displaystyle\lim_{x\to c}f(x)=\lim_{x\to c}g(x)=\pm\infty$,
+\[
+\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}.
+\]
+
+a) Calculate $\displaystyle\lim_{x\to\infty}\frac{x}{e^{x}}$ using l'H\^opital's rule. 
+ 
+\bigskip
+
+b) Compute the Laplace Transform of $f(t)=t$.
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, W6, Exponentials, L'Hopital, ImproperIntegralInfinite
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+\begin{tagblock}{Limits, W6, Exponentials, L'Hopital, ImproperIntegralInfinite, Example}
+\begin{question}
+	You can repeatedly use l'H\^opital's rule as long as you keep on getting $0/0$ or $\pm\infty/\pm\infty$ quotients. For example,
+\[
+\lim_{x\to 0}\frac{x-\sin(x)}{x^2}=\lim_{x\to 0}\frac{1-\cos(x)}{2x},
+\]
+which is still a $0/0$ quotient. We get to use l'H\^opital's rule again!
+\[
+\lim_{x\to 0}\frac{x-\sin(x)}{x^2}=\lim_{x\to 0}\frac{1-\cos(x)}{2x}=\lim_{x\to 0} \frac {\sin(x)}2=0.
+\]
+
+\bigskip
+
+a) Compute the Laplace Transform of $g(t)=t^2$. 
+
+\bigskip
+
+b) Compute the Laplace Transform of $h(t)=t^3$. 
+
+\bigskip
+
+c) Can you guess what the Laplace Transform of $f_n(t)=t^n$ will be for $n$ a whole number?
+	
+\index{Limits}
+	
+\begin{tags}
+	    Limits, W6, Exponentials, L'Hopital, ImproperIntegralInfinite, Example
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+\begin{tagblock}{Limits, W6, Exponentials, L'Hopital}
+\begin{question}
+	You NEED to have a quotient when using l'Hopital's Rule. A limit is in \textit{indeterminate form} if it can be rearranged to a quotient in which l'Hopital's Rule applies. Here are examples of indeterminate forms, along with suggestions on how to calculate the limits. Remember, quotient!
+
+\bigskip
+
+a) $\infty-\infty$: $\displaystyle\lim_{x\to 0^+}\left(\cot(x)-\frac 1 x\right)$ (common denominator)
+
+\bigskip
+
+b) $\infty^0$: $\displaystyle\lim_{t\to\infty}t^{1/t}$ (apply $\ln$, move exponent down, compute limit, then exponentiate)
+
+\bigskip
+
+c) $1^{\infty}$: $\displaystyle\lim_{t\to\infty}\left(1+\frac 2 t\right)^t$ (same trick as part b))
+
+\bigskip
+
+d) $0^0$: $\displaystyle\lim_{x\to 1}(x-1)^{\ln(x)}$ (same trick as part b))
+	
+\index{Limits}
+	
+\begin{tags}
+	   Limits, W6, Exponentials, L'Hopital
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
+\begin{tagblock}{Limits, W6, L'Hopital, Theory, Challenge}
+\begin{question}
+
+Here is an argument for how l'Hopital's Rule actually works. 
+\begin{align*}
+\lim_{x\to a}\frac {f(x)}{g(x)}&=\lim_{x\to a}\left(\frac {f(x)}{g(x)}\cdot\frac{x-a}{x-a}\right) \\
+&=\lim_{x\to a}\left(\frac {f(x)}{x-a}\cdot\frac{x-a}{g(x)}\right)\\
+&=\lim_{x\to a}\frac {f(x)}{x-a}\cdot\lim_{x\to a}\frac{x-a}{g(x)}\\
+&=\frac {f'(a)}{g'(a)}\\
+&=\lim_{x\to a}\frac {f'(x)}{g'(x)}
+\end{align*}
+Does this argument seem correct to you or does it take some liberties with the truth (if not outright lie to you)? If the latter, where?
+	
+\index{Limits}
+	
+\begin{tags}
+	   Limits, W6, L'Hopital, Theory, Challenge
+\end{tags}
+	
+\begin{diary}
+	    
+\end{diary}
+	
+\begin{solution}
+	  
+\end{solution}
+	
+\end{question}
+
+\end{tagblock}
+
+%-------------------------------------------------------------------------------------------------------------
