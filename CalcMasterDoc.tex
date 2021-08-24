@@ -1,0 +1,258 @@
+\documentclass[12pt]{article}
+
+%%% Indexing package
+\usepackage{makeidx}
+\makeindex
+
+\usepackage{comment}
+
+\usepackage{tcolorbox}
+
+%%% Tagging package
+\usepackage{etoolbox,verbatim}
+%%%
+
+\newenvironment{tagse}{\color{orange}\textbf{Tags.} }{}
+\newenvironment{diarys}{\color{magenta}\textbf{Diary.} }{}
+
+\newenvironment{soln}
+{\let\oldqedsymbol=\qedsymbol
+	\renewcommand{\qedsymbol}{$ $}
+	\begin{proof}[\bfseries\upshape \color{blue}Solution]\color{blue}}
+	{\end{proof}
+	\renewcommand{\qedsymbol}{\oldqedsymbol}}
+	
+\newenvironment{ssoln}
+{\let\oldqedsymbol=\qedsymbol
+	\renewcommand{\qedsymbol}{$ $}
+	\begin{proof}[\bfseries\upshape \color{red}Student Solution]\color{blue}}
+	{\end{proof}
+	\renewcommand{\qedsymbol}{\oldqedsymbol}}
+	
+	
+%%%%%%%%%%%%%%%%% Editing of tagging package %%%%%%%%%%%%%%%%%%%%%%%%%
+% A counter used to count the number of tags defined in this file. If
+% using matchsometags, this counter should be 0.
+\newcounter{tagnum}
+
+% A counter used to count the number of tags belonging to a question
+% that matches defined tags in this file. If tagnum = matchnum, the
+% question is shown. Only for matchalltags.
+\newcounter{matchnum}
+
+
+% These are mutually exclusive tag commands %
+% Show questions that match ALL given tags
+\newcommand{\matchalltags}[1]{%
+  \def\do##1{\csdef{tagged@##1}{}\stepcounter{tagnum}}%
+  \docsvlist{#1}}%
+  
+% Show questions that match at least ONE given tag %
+\newcommand{\matchsometags}[1]{%
+  \setcounter{tagnum}{0}%
+  \def\do##1{\csdef{tagged@##1}{}}%
+  \docsvlist{#1}}%
+  
+% Show all questions %
+\newcommand{\showalltags}{%
+  \csdef{tagged@ALL}{}}
+ 
+ 
+  
+% This resets a counter for number of matched tags to 0,
+% then loops through each tag in the current question and
+% counts the number of matches. If the number of matches
+% is the same as the total number of defined tags, show
+% the question.
+%%% tagged@flag is the name of the csname defined in this file for the tag "flag". 
+%%%%% This is how matching is done, by checking the csnames of all of the desired tags and counting them.
+%
+\newenvironment{tagblock}[1]%
+    {
+    \ifcsname tagged@ALL\endcsname%
+    	\let\comment\relax%
+    	\let\endcomment\relax%
+    \else%
+    	\ifnum \value{tagnum}=0%
+    		\def\do##1{%
+       		 	\ifcsname tagged@##1\endcsname%
+       	 			\let\comment\relax%
+        			\let\endcomment\relax%
+    			\fi}%
+   	 		\docsvlist{#1}%
+   		\else%
+   			\setcounter{matchnum}{0}%
+    		\def%
+    		\do##1{%
+       			\ifcsname tagged@##1\endcsname%
+       				\stepcounter{matchnum}%
+       			\fi}% 
+			\docsvlist{#1}%
+   		 	\ifnum \value{matchnum}=\value{tagnum}%
+   			 	\let\comment\relax%
+   		    	\let\endcomment\relax%
+   			\fi%
+   		\fi%
+   	\fi%
+    \comment}%
+   {\endcomment \vspace{-\baselineskip} \leavevmode}%
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\specialcomment{tags}{\begin{tagse}}{\end{tagse}}
+\specialcomment{diary}{\begin{diarys}}{\end{diarys}}
+\specialcomment{solution}{\begin{soln}}{\end{soln}}
+\specialcomment{instructor}{\begin{mdframed}{\color{red}\textbf{COMMENTS FOR INSTRUCTORS: } } }{\end{mdframed}}
+\specialcomment{scratch}{\begin{mdframed}{\color{blue}\textbf{Scratch Work: } } }{\end{mdframed}}
+
+
+%%% These are some packages that are useful
+\usepackage{amsfonts, lipsum}
+\usepackage{amsmath,amssymb, amscd,amsbsy, bbm, amsthm, enumerate}
+\usepackage{mdframed, titlesec, setspace,verbatim, multicol}
+\usepackage[top=1in, bottom=1in, left=.45in, right=.45in]{geometry}
+\usepackage[unicode]{hyperref}
+\usepackage{tikz, pgfplots, xcolor, fancyhdr}
+\usepackage{graphicx, subcaption}
+\usepackage{multirow}
+
+%%% Page formatting
+%\setlength{\headsep}{30pt}
+\setlength{\parindent}{0pt}
+\setlength{\textheight}{9in}
+
+%%% Header and Footer Info
+\pagestyle{fancy}
+\fancyhead[L]{{\large Calculus - \textbf{Master Document}}}
+\fancyhead[C]{}
+\fancyhead[R]{}
+\fancyfoot[L]{UM Dearborn}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{}
+
+%%% These define our question environment and help number things correctly
+\theoremstyle{definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{question}[thm]{Question}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{DEF}[thm]{Definition}
+\newtheorem{rem}[thm]{Remark}
+
+%%% These are some shortcuts that are handy
+\def\real{{\mathbb R}}
+\def\Natural{\mathbb{N}}
+\def\dx{\textnormal{dx}}
+\def\dy{\textnormal{dy}}
+\def\dz{\textnormal{dz}}
+\def\dt{\textnormal{dt}}
+\def\ds{\textnormal{ds}}
+\def\dw{\textnormal{dw}}
+\def\Re{\textnormal{Re}}
+\def\Im{\textnormal{Im}}
+\def\exp{\textnormal{exp}}
+\def\interior{\textnormal{interior}}
+\def\al{\alpha}
+\def\del{\delta}
+\def\Del{\Delta}
+\def\gam{\gamma}
+\def\Gam{\Gamma}
+\def\Om{\Omega}
+\def\ep{\varepsilon}
+\def\lam{\lambda}
+\def\rational{{\mathbb Q}}
+\def\integer{{\mathbb Z}}
+\def\Q{{\mathbb Q}}
+\def\Z{{\mathbb Z}}
+\def\N{{\mathbb N}}
+\def\R{{\mathbb R}}
+\def\grad{\nabla}
+\def\C{\mathcal C}
+\def\P{\mathcal P}
+\def\T{\mathcal T}
+\def\I{\mathcal I}
+\newcommand{\eL}{\mathcal{L}}
+\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\inner}[1]{\langle #1 \rangle}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\spanvect}{\textnormal{span}}
+\newcommand{\union}{\cup}
+\newcommand{\Union}{\bigcup}
+\newcommand\Mydiv[2]{%
+$\strut#1$\kern.25em\smash{\raise.3ex\hbox{$\big)$}}$\mkern-8mu
+        \overline{\enspace\strut#2}$}
+\def\intersect{\cap}
+\def\Intersect{\bigcap}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  NOTE!!! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% There cannot be any whitespace before a \begin{solution} or \end{solution},
+% or else the document will likely fail to compile.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Current list of tags in tags.tex as of August 19, 2021
+
+% Absolute AlgebraicLimits AlternatingSeriesTest AntiDerivative Applications ArcLength Area AverageValue Bijective Bounded Cases ChainRule Challenge      
+% Comparison Cosine Concavity Continuity Convergent Critical CurveSketching DefiniteIntegral Definition Derivatives Differentiable Differential DiskWasher Domain Example Exponentials         
+% Factorial FirstDerivativeTest Fractions FundamentalTheoremI FundamentalTheoremII Geometry GeometricSequences GeometricSeries Graph HigherDerivatives HorizontalAsymptotes 
+% HyperbolicTrig ImplicitDifferentiation ImproperIntegralFinite ImproperIntegralInfinite IncreasingDecreasing IndefiniteIntegral Inequality InfiniteDiscontinuity      
+% InflectionPoints IntegralTest Integration IntegrationByParts IntermediateValueTheorem IntervalOfConvergence InverseTrig        
+% JumpDiscontinuity L'Hopital Limits Logarithms MacLaurinSeries MaxMin MeanValueTheorem Miscellaneous Non-Convergent    
+% Optimization Other p-Series Parametric PartialFractions PartialSums Piecewise Polar Polynomial PowerRule PowerSeries PreCalc ProductRule QuotientRule  
+% RadiusOfConvergence Range RationalFunctions RatioTest RelatedRates RemovableDiscontinuity Review RiemannSum RootTest SecondDerivative SecondDerivativeTest          
+% Series Sequences Shells SlantAsymptotes SquareRoots SqueezeTheorem Substitution SurfaceArea SumRule Table TangentLines TaylorSeries Theory Trigonometry 
+% TrigIntegral TrigSubstitution Unbounded VerticalAsymptotes Velocity Volume WarmUp
+% W1 W2 W3 W4 W5 W6 W7 W8 W9 W10 W11 W12 W13 W14 W15 W16 W17 W18 W19 W20 W21 W22 W23    (These are from worksheets)
+% HW1 HW2 HW3 HW4 HW5 HW6 HW7 HW8          (These are from homework)
+% CQ                                                                     (These are from the challenge questions documents)
+% EX1 EX2 EX3 Final                                                      (These are from exams)
+
+
+
+
+%%% Use these to turn off tags, diarys, and solutions
+%\excludecomment{tags}
+\excludecomment{diary}
+\excludecomment{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%% Use this to include tags/diaries to show questions.
+%%%% \matchalltags{tag1, tag2, tag3, ...} shows questions that have all of these tags.
+%%%% \matchsometag{tag1, tag2, tag3, ...} shows questions that match at least one of these tags.
+%%%% \showalltags shows all questions in the entire document.
+%%%% These are mutually exclusive commands, using more than one will likely cause compile errors.
+
+%\matchalltags{Review}
+\matchsometags{AntiDerivative, Area}
+%\showalltags
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Document Starts now
+\begin{document}
+
+
+ \include{Applications/applications}
+ \include{Challenge/challenge}
+ \include{Continuity/continuity}
+ \include{Derivatives/derivatives}
+ \include{Exams/exams}
+ \include{Geometry/geometry}
+ \include{Integration/integration}
+ \include{Limits/limits}
+ \include{Polar/polar}
+ \include{Parametric/parametric}
+ \include{Review/review}
+ \include{Sequences/sequences}
+ \include{Series/series}
+ 
+ 
+
+\printindex
+
+\end{document}
+
+
+
